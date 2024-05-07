@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 class InnerOnedarrayqus {
-    int arr[] = new int[4];
-    Scanner inp = new Scanner(System.in);
+  public  int arr[] = new int[4];
+  public  Scanner inp = new Scanner(System.in);
 
     void takeinp() {
         System.out.println("Enter the elements in array :");
@@ -57,6 +57,21 @@ class InnerOnedarrayqus {
         }
     }
 
+         void occurance(){
+        Scanner inp = new Scanner(System.in);
+
+        System.out.println("enter the number to know its occurance");
+        int x= inp.nextInt();
+        inp.close();
+        int countX=0;
+        for(int i=0;i<4;i++){
+           if(arr[i]==x){
+            countX++;
+           }
+        }
+        System.out.println("Occurance of x : "+countX); 
+    }
+
 }
 
 public class Onedarrayqus {
@@ -67,6 +82,7 @@ public class Onedarrayqus {
         System.out.println("Sum elements : 3");
         System.out.println("Mazximum element : 4");
         System.out.println("Search element : 5");
+        System.out.println("Element Occurance: 6");
         InnerOnedarrayqus arrayWork = new InnerOnedarrayqus();
         Scanner inp = new Scanner(System.in);
         System.out.println("enter your choice  ");
@@ -74,10 +90,10 @@ public class Onedarrayqus {
         do {
 
             switch (x) {
-                case 1:
+                case 2:
                     arrayWork.display();
                     break;
-                case 2:
+                case 1:
                     arrayWork.takeinp();
                     break;
                 case 3:
@@ -89,6 +105,10 @@ public class Onedarrayqus {
                 case 5:
                     arrayWork.search();
                     break;
+                case 6:
+                   arrayWork.occurance();
+                   break;
+
                 default:
                     if (x > 10) {
                         System.out.println("enter the proper choice :");
