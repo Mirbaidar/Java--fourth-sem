@@ -1,8 +1,7 @@
 import java.util.Scanner;
-
 class InnerOnedarrayqus {
-  public  int arr[] = new int[4];
-  public  Scanner inp = new Scanner(System.in);
+    public int arr[] = new int[4];
+    public Scanner inp = new Scanner(System.in);
 
     void takeinp() {
         System.out.println("Enter the elements in array :");
@@ -10,6 +9,52 @@ class InnerOnedarrayqus {
             System.out.println("Enter the element at position :" + i);
             arr[i] = inp.nextInt();
         }
+    }
+
+    void checkarraysort() {
+        int check = 0;
+        for (int i = 0; i < (arr.length-1); i++) {
+            if (arr[i] <= arr[i+ 1]) {
+                check = check + 0;
+            } else {
+                check = check + 1;
+                break;
+            }
+        }
+        if (check == 0) {
+            System.out.println("Array is sorted : ");
+
+        } else {
+            System.out.println("Array is unsorted : ");
+        }
+    }
+
+    void EleGreaterThenX() {
+        System.out.println("Enter the element to find count of elements greater then it: ");
+        int x = inp.nextInt();
+        int count = 0;
+        for (int i = 0; i < 4; i++) {
+            if (arr[i] > x) {
+                count = count + 1;
+            }
+        }
+        System.out.println("Number of elements greater then x :" + count);
+    }
+
+    void Lastoccurance() {
+        Scanner inp = new Scanner(System.in);
+        System.out.println("Enter the element to find its last occurance :");
+        int x = inp.nextInt();
+
+        int endpos = -1;
+        for (int i = 0; i < 4; i++) {
+            if (arr[i] == x) {
+                endpos = i;
+            }
+        }
+        inp.close();
+        System.out.println("Last occurance :" + endpos);
+
     }
 
     void display() {
@@ -57,19 +102,20 @@ class InnerOnedarrayqus {
         }
     }
 
-         void occurance(){
+    void occurance() {
         Scanner inp = new Scanner(System.in);
 
         System.out.println("enter the number to know its occurance");
-        int x= inp.nextInt();
-        inp.close();
-        int countX=0;
-        for(int i=0;i<4;i++){
-           if(arr[i]==x){
-            countX++;
-           }
+        int x = inp.nextInt();
+
+        int countX = 0;
+        for (int i = 0; i < 4; i++) {
+            if (arr[i] == x) {
+                countX++;
+            }
         }
-        System.out.println("Occurance of x : "+countX); 
+        System.out.println("Occurance of x : " + countX);
+        inp.close();
     }
 
 }
@@ -83,9 +129,13 @@ public class Onedarrayqus {
         System.out.println("Mazximum element : 4");
         System.out.println("Search element : 5");
         System.out.println("Element Occurance: 6");
+        System.out.println("last occurance of element : 7");
+        System.out.println("count elements greater then x:8");
+        System.out.println("Check array is sorted or not :");
         InnerOnedarrayqus arrayWork = new InnerOnedarrayqus();
         Scanner inp = new Scanner(System.in);
         System.out.println("enter your choice  ");
+        // InnerOnedarrayqus obj = new InnerOnedarrayqus();
         int x = inp.nextInt();
         do {
 
@@ -106,9 +156,16 @@ public class Onedarrayqus {
                     arrayWork.search();
                     break;
                 case 6:
-                   arrayWork.occurance();
-                   break;
-
+                    arrayWork.occurance();
+                    break;
+                case 7:
+                    arrayWork.Lastoccurance();
+                case 8:
+                    arrayWork.EleGreaterThenX();
+                    break;
+                case 9:
+                    arrayWork.checkarraysort();
+                    break;
                 default:
                     if (x > 10) {
                         System.out.println("enter the proper choice :");
