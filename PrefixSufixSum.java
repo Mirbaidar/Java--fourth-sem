@@ -1,17 +1,22 @@
 import java.util.Scanner;
 
 public class PrefixSufixSum {
-    static int partition(int arr[]) {
+    static int totalsum(int arr[]) {
         int sum = 0;
         for (int Ele : arr) {
             sum = sum + Ele;
         }
-        int i = 1;
-        while (i < arr.length ) {
-            arr[i] = arr[i - 1] + arr[i];
-            sum = sum - arr[i];
+        return sum;
+    }
 
-            if (arr[i] == sum) {
+    static int partition(int arr[]){
+        int tsum = totalsum(arr);
+        int i = 1;
+        while (i < arr.length) {
+            arr[i] = arr[i - 1] + arr[i];
+            tsum = tsum - arr[i];
+
+            if (arr[i] == tsum) {
 
                 System.out.println("yes done");
 
