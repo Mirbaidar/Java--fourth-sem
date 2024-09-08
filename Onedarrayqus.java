@@ -135,6 +135,8 @@ public class Onedarrayqus {
         InnerOnedarrayqus arrayWork = new InnerOnedarrayqus();
         Scanner inp = new Scanner(System.in);
         System.out.println("enter your choice  ");
+        
+       
         // InnerOnedarrayqus obj = new InnerOnedarrayqus();
         int x = inp.nextInt();
         do {
