@@ -3,7 +3,7 @@ public class MaximumRowSumArray {
         int person[][] = new int[][] { { 12, 2, 2, 3, 4 },
                 { 23, 345, 45, 67 },
                 { 23, 345, 75, 67 },
-                { 2300, 355, 45, 67 } };
+                { 2300, 7550, 45, 67 } };
       System.out.println( "Highest wealth :"+ HighestWealth(person));
     }
 
