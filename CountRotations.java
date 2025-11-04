@@ -7,7 +7,7 @@ public class CountRotations {
     static int findRotations(int arr[]) {
         int pevoit = FindPevoit(arr);
         return pevoit + 1;
-    }
+    } 
 
     static int FindPevoit(int arr[]) {
         int start = 0;
